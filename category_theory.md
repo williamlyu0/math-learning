@@ -4,6 +4,7 @@
   - **Composition:** every pair $f:A\to B$, $g:B\to C$ has a specified composite $g\circ f:A\to C$.
   - **Identity morphisms:** each object $A$ has $1_A:A\to A$. For every $f:A\to B$, $f\circ 1_A=f=1_B\circ f$.
   - **Associativity:** $h\circ(g\circ f)=(h\circ g)\circ f$ for composable morphisms.
+
   * INTERPRETATION: “Identity morphisms”
     * Identity is characterized by composition; we need not inspect the objects’ internal contents.
   * INTERPRETATION: “Associativity”
@@ -12,6 +13,7 @@
     * An **isomorphism** is a morphism $f:A\to B$ having an **inverse** $g:B\to A$ satisfying:
       - $g\circ f=1_A$.
       - $f\circ g=1_B$.
+
       * INTERPRETATION: “inverse”
         * The inverse “undoes” the original morphism in both orders, producing the respective identity morphisms.
         * A morphism going back from $B$ to $A$ need not be an inverse.
@@ -23,6 +25,7 @@
           - Its elements are the morphisms.
           - Its operation is composition.
           - Its identity element is the identity morphism.
+
         * Example: strings under concatenation, with the empty string as identity.
     * Example: the category **Set**.
       - Objects: Sets.
@@ -30,6 +33,7 @@
       - Composition: Function composition.
       - Identities: Identity functions.
       - Associativity: Follows from associativity of function composition.
+
       * INTERPRETATION:
         * No additional structure, such as order, is imposed.
         * Isomorphisms in **Set** are precisely bijective functions.
@@ -39,6 +43,7 @@
       - Composition: Function composition; composites remain order-preserving.
       - Identities: Identity functions, which preserve order.
       - Associativity: Follows from associativity of function composition.
+
       * INTERPRETATION:
         * Structure-preserving functions are an example of morphisms, not their general definition.
         * Isomorphisms here are order-preserving functions with order-preserving inverses.
