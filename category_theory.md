@@ -104,3 +104,52 @@
         * Constructing $h$ uses ordered pairs, but the “property” characterizing it mentions only objects, morphisms, and composition. We can therefore use that characterization as the definition beyond **Set**.
       * INTERPRETATION: It satisfies a "property" we give here
         * The "property" here is abstracted as the **universal property of the product**.
+
+* **Theorem:** Any two categorical products of the same objects are related by a unique isomorphism respecting their projections.
+
+  Here is an intuitive proof:
+  - Suppose $(P,p_A,p_B)$ and $(Q,q_A,q_B)$ are products of $A,B$ in the same category.
+  - Label the morphisms in our diagram:
+    - 1: $p_A:P\to A$.
+    - 2: $p_B:P\to B$.
+    - 3: $q_A:Q\to A$.
+    - 4: $q_B:Q\to B$.
+    - 5: $v:P\to Q$.
+    - 6: $u:Q\to P$.
+    - 7: $1_P:P\to P$.
+    - 8: $1_Q:Q\to Q$.
+  - We write chains in traversal order: $[6,1]$ means $p_A\circ u$. Equality of chains means equality of their composites.
+
+  **Existence supplies arrows 5 and 6.**
+  - Apply $P$'s universal property with $X=Q$ and morphisms $q_A,q_B$. Its existence clause supplies $u$ such that:
+    - $[6,1]=[3]$.
+    - $[6,2]=[4]$.
+  - Apply $Q$'s universal property with $X=P$ and morphisms $p_A,p_B$. Its existence clause supplies $v$ such that:
+    - $[5,3]=[1]$.
+    - $[5,4]=[2]$.
+
+  **Substitution shows that the round trips preserve the projections.**
+  - Using associativity and substitution of equal composites:
+    - $[5,6,1]=[5,3]=[1]$.
+    - $[5,6,2]=[5,4]=[2]$.
+    - $[6,5,3]=[6,1]=[3]$.
+    - $[6,5,4]=[6,2]=[4]$.
+
+  **Uniqueness identifies each round trip with an identity.**
+  - Apply $P$'s universal property with $X=P$ and its own projections $p_A,p_B$.
+    - Exactly one morphism $h_P:P\to P$ satisfies $[h_P,1]=[1]$ and $[h_P,2]=[2]$.
+    - The identity morphism 7 satisfies both equations by the identity laws.
+    - The composite $[5,6]$ also satisfies both equations, as shown above.
+    - Uniqueness therefore gives $[5,6]=[7]$, meaning $u\circ v=1_P$.
+  - Similarly, applying $Q$'s universal property with $X=Q$ and projections $q_A,q_B$ gives $[6,5]=[8]$, meaning $v\circ u=1_Q$.
+
+  Thus $u$ and $v$ are inverses, so they are isomorphisms.
+  Moreover, $Q$'s universal property with $X=P$ makes $v$ the unique morphism respecting both projections—and hence the unique isomorphism doing so.
+
+  * INTERPRETATION:
+    * Existence lets us draw the connecting arrows with the required projection equations.
+    * Composition gives each chain a composite morphism; associativity permits regrouping.
+    * The identity laws provide morphisms against which to compare the round trips.
+    * Uniqueness forces equality because the round trip and identity satisfy the same requirements.
+  * INTERPRETATION: respecting both projections
+    * This intuitively means "seeing through you is the same as seeing through me".
