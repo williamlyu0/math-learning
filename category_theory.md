@@ -54,7 +54,11 @@
     * Composition: compose then map = map then compose.
     * Identities: identities map to identities.
 
-* We extract a pattern from how the Cartesian product and its projections behave in **Set**, then use that pattern to define a **categorical product**.
+* In daily life, we often encounter the activity of "independently assign attributes to objects". So, **if we only care about these attributes**, what is a "natural" encoding for representing the objects?
+
+  We can use ordered tuples of values drawn from these attribute sets as encoding for representing the objects. The purpose of such encoding is that we only care (want to distinguish the objects) about their attributes. We also want to be able to retrieve the value of each attribute from this encoding. Note that this is what "projection", introduced and defined later, intuitively does. We will see that Cartesian product with such projection is a "minimal" construction for a universal encoding.
+
+  We extract a pattern from how the Cartesian product and its projections behave in **Set**, then use that pattern to define a **categorical product**.
   * INTERPRETATION: “pattern”
     * In a category $\mathcal C$, a **product** of objects $A,B$ consists of:
       - An object $P$.
@@ -63,18 +67,34 @@
       - For every object $X$ and every pair of morphisms $\alpha:X\to A$, $\beta:X\to B$, there exists exactly one morphism $h:X\to P$ such that:
         - $p_A\circ h=\alpha$.
         - $p_B\circ h=\beta$.
+
       * INTERPRETATION:
         * The product is the whole arrangement $(P,p_A,p_B)$, not $P$ alone.
         * “Every object $X$” includes $P$ itself.
   * INTERPRETATION: “how the Cartesian product and its projections behave”
     * Suppose we have attribute-value sets $C,S$, their Cartesian product $C\times S$, and projections $p_C,p_S$ retrieving the respective components of each pair.
-      Given any set $X$ and attribute assignments $c:X\to C$, $s:X\to S$, construct $h:X\to C\times S$ by $h(x)=(c(x),s(x))$.
+
       It satisfies a "property" we give here:
-      - $p_C\circ h=c$.
-      - $p_S\circ h=s$.
+      - Given any set $X$ and attribute assignments $c:X\to C$, $s:X\to S$, consider $h:X\to C\times S$ that satisfies:
+        - $p_C\circ h=c$.
+        - $p_S\circ h=s$.
+
+        This $h$ exists and is unique. (The $h$ is actually $h(x)=(c(x),s(x))$.)
+
       These equations say that projecting after $h$ recovers the original assignments.
       Our construction proves existence. For uniqueness, any function satisfying these equations must assign each $x$ a pair whose components are $c(x)$ and $s(x)$—hence that pair must be $h(x)$.
+
       * INTERPRETATION:
-        * Constructing $h$ uses ordered pairs, but its characterization—existence and uniqueness subject to the "property"—mentions only objects, morphisms, and composition. We can therefore use that characterization as the definition beyond **Set**.
+        * The intuitive role played by projections is the retrieval of individual attribute values.
+        * The universal property can be intuitively interpreted as:
+          - Every combination of attribute values can be represented and recovered through the projections.
+            This is ensured by existence of $h$ for every $X,c,s$.
+          - No combination has multiple representations in $P$.
+            This is ensured by uniqueness of $h$.
+
+          Thus, $P$ is being "minimal", or being just sufficient for encoding the attributes without anything extra.
+
+      * INTERPRETATION:
+        * Constructing $h$ uses ordered pairs, but the “property” characterizing it mentions only objects, morphisms, and composition. We can therefore use that characterization as the definition beyond **Set**.
       * INTERPRETATION: It satisfies a "property" we give here
-        * The existence of exactly one $h$ satisfying this property, for every $X,c,s$, is abstracted as the **universal property of the product**.
+        * The "property" here is abstracted as the **universal property of the product**.
