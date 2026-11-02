@@ -53,3 +53,28 @@
     * Endpoints: an arrow $A\to B$ becomes an arrow $F(A)\to F(B)$.
     * Composition: compose then map = map then compose.
     * Identities: identities map to identities.
+
+* We extract a pattern from how the Cartesian product and its projections behave in **Set**, then use that pattern to define a **categorical product**.
+  * INTERPRETATION: “pattern”
+    * In a category $\mathcal C$, a **product** of objects $A,B$ consists of:
+      - An object $P$.
+      - Morphisms $p_A:P\to A$ and $p_B:P\to B$, called **projections**.
+      These satisfy a property defined to be called **universal property of the product**:
+      - For every object $X$ and every pair of morphisms $\alpha:X\to A$, $\beta:X\to B$, there exists exactly one morphism $h:X\to P$ such that:
+        - $p_A\circ h=\alpha$.
+        - $p_B\circ h=\beta$.
+      * INTERPRETATION:
+        * The product is the whole arrangement $(P,p_A,p_B)$, not $P$ alone.
+        * “Every object $X$” includes $P$ itself.
+  * INTERPRETATION: “how the Cartesian product and its projections behave”
+    * Suppose we have attribute-value sets $C,S$, their Cartesian product $C\times S$, and projections $p_C,p_S$ retrieving the respective components of each pair.
+      Given any set $X$ and attribute assignments $c:X\to C$, $s:X\to S$, construct $h:X\to C\times S$ by $h(x)=(c(x),s(x))$.
+      It satisfies a "property" we give here:
+      - $p_C\circ h=c$.
+      - $p_S\circ h=s$.
+      These equations say that projecting after $h$ recovers the original assignments.
+      Our construction proves existence. For uniqueness, any function satisfying these equations must assign each $x$ a pair whose components are $c(x)$ and $s(x)$—hence that pair must be $h(x)$.
+      * INTERPRETATION:
+        * Constructing $h$ uses ordered pairs, but its characterization—existence and uniqueness subject to the "property"—mentions only objects, morphisms, and composition. We can therefore use that characterization as the definition beyond **Set**.
+      * INTERPRETATION: It satisfies a "property" we give here
+        * The existence of exactly one $h$ satisfying this property, for every $X,c,s$, is abstracted as the **universal property of the product**.
