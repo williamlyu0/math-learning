@@ -64,7 +64,7 @@
   We can use ordered tuples of values drawn from these attribute sets as encoding for representing the objects. The purpose of such encoding is that we only care (want to distinguish the objects) about their attributes. We also want to be able to retrieve the value of each attribute from this encoding. Note that this is what "projection", introduced and defined later, intuitively does. We will see that Cartesian product with such projection is a "minimal" construction for a universal encoding.
 
   We extract a pattern from how the Cartesian product and its projections behave in **Set**, then use that pattern to define a **categorical product**.
-  * INTERPRETATION: “pattern”
+  * INTERPRETATION: then use that pattern to define a **categorical product**.
     * In a category $\mathcal C$, a **product** of objects $A,B$ consists of:
       - An object $P$.
       - Morphisms $p_A:P\to A$ and $p_B:P\to B$, called **projections**.
@@ -89,9 +89,10 @@
       These equations say that projecting after $h$ recovers the original assignments.
       Our construction proves existence. For uniqueness, any function satisfying these equations must assign each $x$ a pair whose components are $c(x)$ and $s(x)$—hence that pair must be $h(x)$.
 
-      * INTERPRETATION:
+      * INTERPRETATION: It satisfies a "property" we give here:
         * The intuitive role played by projections is the retrieval of individual attribute values.
-        * The universal property can be intuitively interpreted as:
+        * The part of the "property" of $X, c, s$ can be intuitively interpreted as "an actual attribute assignment of a collection of stuff".
+        * The "satisfaction of the property" can be intuitively interpreted as:
           - Every combination of attribute values can be represented and recovered through the projections.
             This is ensured by existence of $h$ for every $X,c,s$.
           - No combination has multiple representations in $P$.
