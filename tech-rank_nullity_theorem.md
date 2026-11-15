@@ -4,7 +4,6 @@ type: technique
 
 # TECH: Rank-Nullity Theorem
 
-[[construct-function]]
 [[construct-function_kernel]]
 [[construct-linear_map]]
 [[construct-rank]]
