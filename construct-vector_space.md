@@ -20,12 +20,26 @@ type: construct
         - For $a, b \in \mathbb{F}$ and $v \in V$, we have $a(bv) = (ab)v$.
       - For $v \in V$, we have $1_\mathbb{F} v = v$.
 * Some properties of a vector space:
-  - $0_\mathbb{F} v = 0_V$
+  * For any vector $v$ in a vector space $V$ over a field $\mathbb F$:
+    - $0_{\mathbb F}v=0_V$.
 
-    Proof:
-    
-    Ah yes. 0v=(0+0)v (field axiom) = 0v+0v (scalar multiplication distributivity) 
-    0v + (-0v) = (0v + 0v) + (-0v) (existence of additive inverse)
-    0_v = 0v + (0v + (-0v)) (lhs relies on additive inverse axiom, rhs relies on associativity)
-    0_v = 0v + 0_v (rhs relies on additive inverse axiom)
-    0_v = 0v (axiom of 0_v adding with arbitrary vector axiom)
+    * EXPANSION: $0_{\mathbb F}v=0_V$
+      * By the additive identity in $\mathbb F$ and distributivity:
+        - $0_{\mathbb F}v
+          =(0_{\mathbb F}+0_{\mathbb F})v
+          =0_{\mathbb F}v+0_{\mathbb F}v$.
+
+        Add the additive inverse of $0_{\mathbb F}v$ to both sides:
+        - $0_{\mathbb F}v+(-0_{\mathbb F}v)
+          =(0_{\mathbb F}v+0_{\mathbb F}v)+(-0_{\mathbb F}v)$.
+
+        By the additive inverse, associativity, and additive identity
+        properties in $V$:
+        - $0_V
+          =0_{\mathbb F}v+(0_{\mathbb F}v+(-0_{\mathbb F}v))
+          =0_{\mathbb F}v+0_V
+          =0_{\mathbb F}v$.
+
+    * INTERPRETATION:
+      * $0_{\mathbb F}$ is the additive identity of the field;
+        $0_V$ is the additive identity of the vector space.
