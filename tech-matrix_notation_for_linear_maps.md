@@ -5,8 +5,8 @@ type: technique
 # TECH: matrix notation for linear maps
 
 [[construct-linear_map]]
-[[construct-vector_space_dimension]]
-[[construct-matrix_vector_product]]
+[[construct-vector_space_basis_and_dimension]]
+[[construct-matrix_vector_multiplication_and_matrix_vector_product]]
 
 ## user
 

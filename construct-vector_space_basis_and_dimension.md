@@ -2,7 +2,7 @@
 type: construct
 ---
 
-# vector space dimension
+# vector space basis and dimension
 
 [[construct-finitely_generated_vector_space]]
 [[construct-linear_independence]]

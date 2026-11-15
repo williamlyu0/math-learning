@@ -7,4 +7,4 @@ type: technique
 [[tech-matrix_notation_for_linear_maps]]
 [[construct-linear_map]]
 [[construct-function_composition]]
-[[construct-matrix_matrix_product]]
+[[construct-matrix_multiplication_matrix_product]]

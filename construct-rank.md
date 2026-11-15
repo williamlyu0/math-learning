@@ -6,7 +6,7 @@ type: construct
 
 [[construct-function]]
 [[construct-linear_map]]
-[[construct-vector_space_dimension]]
+[[construct-vector_space_basis_and_dimension]]
 
 
 ## user
