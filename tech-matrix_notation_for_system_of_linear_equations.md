@@ -2,25 +2,18 @@
 type: technique
 ---
 
-# TECH: matrix notation for system of linear equations
+# TECH: matrix notation for a system of linear equations
 
-[[construct-matrix]]
-[[construct-system_of_linear_equations]]
+* A [[construct-matrix|matrix]] can record the coefficients of a [[construct-system_of_linear_equations|system of linear equations]]. An **augmented matrix** also records the constants.
 
+  * EXPANSION:
+    * Fix an order for the unknowns. Each row records one equation: its entries give the coefficients of the corresponding unknowns, followed by the constant on the right-hand side.
 
-## user
+      * INTERPRETATION:
+        * This is compact notation for the equations; the unknown names and their order are implicit. It can be introduced before defining any matrix product.
 
-Now, let's consider two types of systems of linear equations. First type is that all constants are 0, the second type is that all constants may potentially be non-zero.
+    * Once [[construct-matrix_vector_multiplication_and_matrix_vector_product|matrix–tuple multiplication]] is defined, we can also write the system as $Ax=b$, where $A$ is the coefficient matrix, $x$ is the tuple of unknowns, and $b$ is the tuple of right-hand constants. The augmented matrix is $[A\mid b]$.
 
-We use matrix to represent both. The second is typically called "augmented matrix".
-
-## AI
-
-Yes. The standard terms are:
-
-- **Homogeneous system:** all constants are zero, so it has the form \(Ax=0\).
-- **Nonhomogeneous system:** the constants are allowed to be nonzero, so it has the form \(Ax=b\). This includes the homogeneous case if we allow \(b=0\).
-
-\(A\) is the **coefficient matrix**. The **augmented matrix** \([A\mid b]\) records both the coefficients and constants. We can write one for either type; for a homogeneous system it is \([A\mid 0]\).
-
-I’m following your distinction between the two systems.
+      * INTERPRETATION:
+        * A **homogeneous** system has $b=0$. An augmented matrix can record a homogeneous or a nonhomogeneous system.
+        * Other sign conventions are possible if the meaning of the last column is specified.
