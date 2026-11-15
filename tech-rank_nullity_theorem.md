@@ -10,7 +10,7 @@ type: technique
   Here $\operatorname{rank}(f)$ is the [[construct-rank|dimension of the image]]; $\operatorname{nullity}(f)$ is the dimension of the kernel $\ker f=\{v\in V:f(v)=0_W\}$.
 
   * EXPANSION:
-    * First suppose $W$ is finite-dimensional. Choose ordered bases, and let $A$ be the [[tech-matrix_notation_for_linear_maps|matrix of $f$]]. Its $m$ columns $A_1,\ldots,A_m$ are the coordinates of the images of the $m=\dim V$ input basis vectors.
+    * First suppose $W$ is finite-dimensional. Choose ordered bases, and let $A$ be the [[tech-matrix_notation_for_linear_maps|matrix]] of $f$. Its $m$ columns $A_1,\ldots,A_m$ are the coordinates of the images of the $m=\dim V$ input basis vectors.
 
       The image is spanned by those images. To investigate their independence, consider:
       - $A_1x_1+\cdots+A_mx_m=0$.
