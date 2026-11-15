@@ -4,28 +4,9 @@ type: construct
 
 # function linearity
 
-[[construct-function]]
+* A [[construct-function|function]] $f:V\to W$ between [[construct-vector_space|vector spaces]] over the same field $\mathbb F$ is **linear** if, for every $u,v\in V$ and $a\in\mathbb F$:
+  - $f(u+v)=f(u)+f(v)$.
+  - $f(av)=af(v)$.
 
-## user
-
-Now, we define, separately, a property of functions from vector spaces to vector spaces.&#x20;
-
-
-
-This property is:
-
-- f(a+b) = f(a) + f(b)
-- f(ca) = cf(a)
-
-
-
-This property is defined to be called "linear".
-
-## AI
-
-Yes. Given vector spaces \(V\) and \(W\) over the same field \(\mathbb F\), a function \(f:V\to W\) is called **linear** if, for all \(a,b\in V\) and \(c\in\mathbb F\),
-\[
-f(a+b)=f(a)+f(b),\qquad f(ca)=cf(a).
-\]
-
-This is a separate definition from the matrix notation we’ve introduced so far. I’m following.
+  * INTERPRETATION:
+    * Linearity lets us find the image of a linear combination by taking the same linear combination of the images.

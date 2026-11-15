@@ -4,5 +4,7 @@ type: construct
 
 # linear map
 
-[[construct-finitely_generated_vector_space]]
-[[construct-function_linearity]]
+* A **linear map** is a [[construct-function|function]] between vector spaces over the same field that satisfies [[construct-function_linearity|linearity]].
+
+  * INTERPRETATION:
+    * This definition does not require the spaces to be finitely generated. Some later constructions impose that additional assumption.

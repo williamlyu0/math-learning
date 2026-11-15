@@ -6,7 +6,7 @@ type: construct
 
 * When we consider [[construct-finitely_generated_vector_space]],
   a finite spanning collection can be reduced to a
-  **[[construct-vector_space_basis_and_dimension|basis]]** that satisfy:
+  **basis** that satisfy:
   - Being able to [[construct-linear_combination|linear combine]] into any element of the vector space.
   - Being [[construct-linear_independence|linearly independent]].
   
