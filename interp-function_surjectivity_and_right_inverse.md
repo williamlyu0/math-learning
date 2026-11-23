@@ -2,20 +2,18 @@
 type: interpretation
 ---
 
-# INTERP: Function surjectivity and right inverses
+# INTERP: function surjectivity and right inverses
 
-* A function with a [[construct-function_right_inverse|right inverse]] is [[construct-function_surjectivity|surjective]]. Conversely, constructing a right inverse from an arbitrary surjective function requires choosing a preimage for each element of its codomain.
+* Assuming the axiom of choice, a function $f:X\to Y$ is [[construct-function_surjectivity|surjective]] if and only if it has a [[construct-function_right_inverse|right inverse]].
 
-  * EXPANSION: A function with a right inverse is surjective
-    * If $f:X\to Y$ and $f\circ h=\operatorname{id}_Y$, then for every $y\in Y$, $f(h(y))=y$. Thus every $y$ is reached by $f$.
+  * EXPANSION:
+    * Proof from right to left:
 
-  * EXPANSION: choosing a preimage for each element of its codomain
-    * Surjectivity ensures that every $y\in Y$ has at least one preimage. If we choose one $h(y)$ for each $y$, then $f\circ h=\operatorname{id}_Y$.
+      Suppose $h:Y\to X$ is a right inverse of $f$. For each $y\in Y$, the equation $f(h(y))=y$ exhibits $h(y)$ as a preimage of $y$. Thus $f$ is surjective.
 
-    * INTERPRETATION:
-      * For arbitrary sets, the general assertion that every surjective function has a right inverse is equivalent to the **axiom of choice**. The need for choice can arise with nonempty sets.
+    * Proof from left to right:
 
-  * INTERPRETATION: choosing a preimage
-    * For a surjective linear map $f:V\to W$ between finitely generated vector spaces, choose a basis $w_1,\ldots,w_n$ of $W$ and choose $v_i\in V$ with $f(v_i)=w_i$.
-      For $w=a_1w_1+\cdots+a_nw_n$, define $h(w)=a_1v_1+\cdots+a_nv_n$.
-      The unique basis coefficients make $h$ well-defined and linear, and $f(h(w))=w$. Thus $h$ is a linear right inverse.
+      Suppose $f$ is surjective. For each $y\in Y$, the set of its preimages is nonempty. By the axiom of choice, we can choose one preimage for every $y$ and call it $h(y)$. This defines a function $h:Y\to X$. By construction, $f(h(y))=y$ for every $y$, so $f\circ h=\operatorname{id}_Y$ and $h$ is a right inverse of $f$.
+
+  * INTERPRETATION: Assuming the axiom of choice
+    * Only the left-to-right proof uses choice. Over ZF set theory, the assertion that every surjective function has a right inverse is equivalent to the axiom of choice.
