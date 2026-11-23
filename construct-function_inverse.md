@@ -9,6 +9,3 @@ type: construct
   - $f\circ g=\operatorname{id}_Y$.
 
   Such a function $g$ is called an **inverse function** of $f$.
-
-  * INTERPRETATION:
-    * An inverse function is unique, as established in [[interp-function_bijectivity_and_inverse|the bijectivity and inverse relationship]]. We denote it by $f^{-1}$.
