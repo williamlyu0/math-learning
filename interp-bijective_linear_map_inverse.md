@@ -7,7 +7,7 @@ type: interpretation
 * The inverse function of a bijective [[construct-linear_map|linear map]] is also linear. It is therefore an invertible linear map whose inverse is the original map.
 
   * EXPANSION: inverse function
-    * Let $f:V\to W$ be bijective and linear. By the [[tech-inverse_of_a_bijective_function|construction of the inverse of a bijective function]], it has a unique inverse function $g=f^{-1}:W\to V$.
+    * Let $f:V\to W$ be bijective and linear. By the [[tech-inverse_of_a_bijective_function|well-definedness of the inverse of a bijective function]], it has a unique inverse function $g=f^{-1}:W\to V$.
 
   * EXPANSION: also linear
     * Choose arbitrary $u,w\in W$ and $c\in\mathbb F$. Let $u'=g(u)$ and $w'=g(w)$; these are the unique preimages of $u$ and $w$.
