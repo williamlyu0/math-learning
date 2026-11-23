@@ -4,17 +4,21 @@ type: technique
 
 # TECH: matrix representation of the inverse of a bijective linear map
 
-* A bijective linear map $f:V\to W$ has a unique [[construct-linear_map_inverse|inverse linear map]] $f^{-1}:W\to V$. When $V,W$ are finite-dimensional and their ordered bases are fixed, $f^{-1}$ is represented by a unique matrix. This matrix is an [[construct-matrix_inverse|inverse of the matrix]] representing $f$.
+* To find a matrix that undoes the matrix of a bijective linear map $f:V\to W$, first ask which function undoes $f$. Its inverse function $g:W\to V$ is linear. In finite dimensions, representing $g$ in the reversed ordered bases gives an [[construct-matrix_inverse|inverse of the matrix]] representing $f$.
 
   * EXPANSION:
-    * Obtain the inverse function. By the [[tech-inverse_of_a_bijective_function|well-definedness of the inverse of a bijective function]], $g=f^{-1}$ assigns each $w\in W$ its unique preimage and satisfies both inverse equations.
+    * Bijectivity tells us exactly what the reverse operation must do. By the [[tech-inverse_of_a_bijective_function|well-definedness of the inverse of a bijective function]], $g=f^{-1}$ sends each $w\in W$ to its unique preimage. Thus $g\circ f=\operatorname{id}_V$ and $f\circ g=\operatorname{id}_W$.
 
-    * Verify linearity. For $u,w\in W$ and $c\in\mathbb F$, write $u'=g(u)$ and $w'=g(w)$. Linearity of $f$ identifies the preimage in each case:
-      - $f(u'+w')=u+w$, so $g(u+w)=u'+w'=g(u)+g(w)$.
-      - $f(cu')=cu$, so $g(cu)=cu'=cg(u)$.
+    * To represent $g$ as a linear map, we first need to know that taking unique preimages preserves addition and scalar multiplication. Take $u,w\in W$ and $c\in\mathbb F$, and write $u'=g(u)$ and $w'=g(w)$. Linearity of $f$ lets us identify each preimage:
+      - $f(u'+w')=u+w$, so the unique preimage of $u+w$ is $u'+w'=g(u)+g(w)$.
+      - $f(cu')=cu$, so the unique preimage of $cu$ is $cu'=cg(u)$.
 
-      Thus $g$ satisfies the definition of an inverse linear map. Its uniqueness already follows from uniqueness as a function.
+      These two identities establish linearity, so $g$ is an [[construct-linear_map_inverse|inverse linear map]] of $f$.
 
-    * Represent $g$ in coordinates. Now assume finite dimension and fix ordered bases $B$ of $V$ and $C=(w_1,\ldots,w_n)$ of $W$. The input basis for $g$ is $C$ and its output basis is $B$. By [[tech-matrix_notation_for_linear_maps|matrix notation for linear maps]], column $j$ of its unique matrix $G$ is $[g(w_j)]_B$, the coordinates of the unique preimage of $w_j$.
+    * Now that $g$ is linear, we can build its matrix by asking where $g$ sends each of its input basis vectors. Assume $V,W$ are finite-dimensional, and fix ordered bases $B$ of $V$ and $C=(w_1,\ldots,w_n)$ of $W$. Since $g$ goes from $W$ back to $V$, its inputs use $C$ and its outputs use $B$. For each $w_j$, take its unique preimage $g(w_j)$ and express it in $B$. By [[tech-matrix_notation_for_linear_maps|matrix notation for linear maps]], that coordinate tuple is column $j$ of the unique matrix $G$ representing $g$.
 
-    * Check the matrix inverse equations. Let $A$ represent $f$ from basis $B$ to basis $C$. By [[tech-matrix_notation_for_linear_maps_composition|matrix notation for composition]], $GA$ represents $g\circ f=\operatorname{id}_V$ from $B$ to $B$, and $AG$ represents $f\circ g=\operatorname{id}_W$ from $C$ to $C$. Since the bijection gives $V$ and $W$ the same dimension $n$, both products equal $I_n$.
+    * To see why $G$ is a matrix inverse, translate the two ways $g$ undoes $f$ into the corresponding matrix products. Let $A$ represent $f$ with input basis $B$ and output basis $C$. By [[tech-matrix_notation_for_linear_maps_composition|matrix notation for composition]]:
+      - Apply $f$ and then $g$. The product $GA$ represents $\operatorname{id}_V$ with basis $B$ at both ends, so it returns the original $B$-coordinates.
+      - Apply $g$ and then $f$. The product $AG$ represents $\operatorname{id}_W$ with basis $C$ at both ends, so it returns the original $C$-coordinates.
+
+      Both products are therefore identity matrices. Since $f$ is bijective and linear, both spaces have dimension $n$, giving $GA=AG=I_n$ as required.
