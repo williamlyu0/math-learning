@@ -2,7 +2,7 @@
 type: interpretation
 ---
 
-# INTERP: How RREF helps establish that dimension is well-defined
+# INTERP: How does RREF help establishing that dimension is well-defined?
 
 * [[tech-row_reduced_echelon_form|RREF]] characterizes the solutions of a system constructed from two bases. Its solution structure shows that the bases have the same number of vectors, allowing dimension to be defined independently of the choice of basis.
 
