@@ -12,7 +12,7 @@ type: construct
 
   * EXPANSION: matrix product
     * To motivate the rule, consider [[construct-function_composition|composable]] linear maps $f:V\to W$ and $g:W\to U$, with chosen ordered bases for all three spaces.
-      Let $F$ and $G$ be their [[tech-matrix_notation_for_linear_maps|matrices]], using the same basis of $W$ for the output of $f$ and the input of $g$.
+      Let $F$ and $G$ be their [[construct-matrix|matrices]], using the same basis of $W$ for the output of $f$ and the input of $g$.
 
       For the $i$-th input basis vector $v_i$, $F(*,i)$ gives the coefficients of $f(v_i)$ in the chosen basis of $W$.
       By linearity, applying $g$ gives a linear combination of the images of those basis vectors with these same coefficients.
