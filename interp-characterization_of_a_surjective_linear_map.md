@@ -2,9 +2,9 @@
 type: interpretation
 ---
 
-# INTERP: Linear map surjectivity and rank
+# INTERP: characterization of a surjective linear map
 
-* For a [[construct-linear_map|linear map]] $f:V\to W$ between finitely generated vector spaces, [[construct-function_surjectivity|surjectivity]] is equivalent to:
+* A [[construct-linear_map|linear map]] $f:V\to W$ between finitely generated vector spaces is [[construct-surjective_linear_map|surjective]] if and only if
   - $\operatorname{rank}(f)=\dim W$.
 
   * EXPANSION:

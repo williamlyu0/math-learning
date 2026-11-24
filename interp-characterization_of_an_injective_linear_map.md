@@ -2,9 +2,9 @@
 type: interpretation
 ---
 
-# INTERP: Linear map injectivity and rank
+# INTERP: characterization of an injective linear map
 
-* For a [[construct-linear_map|linear map]] $f:V\to W$ between finitely generated vector spaces, [[construct-function_injectivity|injectivity]] is equivalent to:
+* A [[construct-linear_map|linear map]] $f:V\to W$ between finitely generated vector spaces is [[construct-injective_linear_map|injective]] if and only if
   - $\operatorname{rank}(f)=\dim V$.
 
   * EXPANSION:
