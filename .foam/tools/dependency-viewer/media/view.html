@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src __SOURCE__ 'unsafe-inline'; script-src 'nonce-__NONCE__';">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="__CSS__" rel="stylesheet"><title>Foam dependencies</title></head>
+<body>
+<header><h1>Dependencies</h1><span id="summary" aria-live="polite"></span>
+<div class="actions"><button id="log">View log</button><button id="refresh">Refresh</button></div></header>
+<nav aria-label="Graph controls">
+<label>View <select id="filter"><option value="2">All types</option><option value="1">Construct + Tech</option><option value="0">Construct only</option></select></label>
+<label><input type="checkbox" id="full"> Show all dependencies</label>
+<button id="open" title="Ctrl + click a node" disabled>Open note</button>
+<div class="actions"><button id="smaller" aria-label="Zoom out">−</button><button id="fit">Fit</button><button id="larger" aria-label="Zoom in">+</button></div></nav>
+<section id="notice" hidden role="status"><span></span></section>
+<main id="viewport" aria-label="Dependency graph" tabindex="0"><div id="extent"><div id="canvas">
+<svg id="edges" aria-hidden="true"><defs><marker id="arrow" orient="auto" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"><path d="M0 0 L10 5 L0 10 Z"/></marker></defs><g></g></svg><div id="nodes"></div></div></div></main>
+<script nonce="__NONCE__" src="__JS__"></script></body></html>

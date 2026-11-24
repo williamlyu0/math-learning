@@ -1,0 +1,53 @@
+{
+  "name": "foam-dependency-viewer",
+  "displayName": "Foam Dependency Viewer",
+  "description": "Explore the dependencies in a typed Foam knowledge graph.",
+  "version": "0.1.0",
+  "publisher": "math-learning",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./dist/extension.js",
+  "extensionKind": [
+    "workspace"
+  ],
+  "categories": [
+    "Visualization"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    },
+    "virtualWorkspaces": {
+      "supported": false
+    }
+  },
+  "activationEvents": [
+    "onCommand:foamDependencies.open"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "foamDependencies.open",
+        "title": "Foam: Open Dependency Graph"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node build.js",
+    "test": "node --test test/*.test.js",
+    "vscode:prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamlyu0/math-learning.git",
+    "directory": ".foam/tools/dependency-viewer"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "1.1.5",
+    "yaml": "2.8.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}

@@ -1,0 +1,9 @@
+**/*
+!package.json
+!README.md
+!DESIGN.md
+!THIRD-PARTY.txt
+!dist/extension.js
+!dist/view.js
+!media/view.html
+!media/view.css
