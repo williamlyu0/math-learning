@@ -2,7 +2,7 @@
 type: interpretation
 ---
 
-# INTERP: For square matrices $A$ and $B$, why does $BA=I$ force $AB=I$?
+# INTERP: Why left inverse of a square matrix is its right inverse?
 
 * Let $A$ and $B$ be $n\times n$ matrices over the same field. If $BA=I_n$, then $AB=I_n$.
 
